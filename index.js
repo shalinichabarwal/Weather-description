@@ -11,13 +11,13 @@ app.get("/", function (req, res) {
 app.post("/", function (req, res) {
   const cityName = req.body.city;
   console.log(cityName);
-  const API = "45c680de8c433b984332fb4bf365c1b1";
+  
 
   const url_weather =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     cityName +
-    "&units=metric&appid=" +
-    API;
+    "&units=metric&appid=45c680de8c433b984332fb4bf365c1b1" ;
+    
 
   https.get(url_weather, function (response) {
     response.on("data", function (data) {
